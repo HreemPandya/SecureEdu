@@ -51,7 +51,7 @@ const uint16_t ROW_PINS[KEYPAD_ROWS] = {ROW1_PIN, ROW2_PIN, ROW3_PIN, ROW4_PIN};
 const uint16_t COL_PINS[KEYPAD_COLS] = {COL1_PIN, COL2_PIN, COL3_PIN, COL4_PIN};
 
 const char KEYPAD_MAP[KEYPAD_ROWS][KEYPAD_COLS] = {
-		{'2', '1', '3', 'A'},
+		{'1', '2', '3', 'A'},
 		{'5', '4', '6', 'B'},
 		{'7', '8', '9', 'C'},
 		{'*', '0', '#', 'D'}
@@ -69,7 +69,7 @@ static KeypadInput keypadState = {0};
 static uint8_t receivedAccessKey[ACCESS_KEY_SIZE + 1] = {0};
 static bool accessKeyReceived = false;
 static uint8_t decryption_key[KEY_SIZE] = {0};
-static uint8_t encrypted_buffer[MAX_DATA_SIZE] = {0};
+static uint8_t encrypted_buffer[MAX_DATA_SIZE] = {1};
 
 /* Function Prototypes */
 void SystemClock_Config(void);
